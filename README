@@ -1,0 +1,24 @@
+This is my personal website at www.matthewkulp.com.
+
+
+These notes are updated promptly as things develop.
+
+******** NOTES ********
+
+Known issues:
+
+* Hover for .windows is in the index.html - Should be integrated in the CSS.
+* Copyright line break is an image - Should be expressed through code.
+* Project page URL's are sloppy.
+* Images take up a good chunk of memory.
+
+
+Brainstorm for expansion:
+
+* Include news or blogging component
+* Add thesis work and integrate it as a blog.
+* Develop media queries.
+* Integrate into a GUI like Tumblr.
+* Develop more sophisticated navigation.
+* Integrate infinite scroll pagination.
+* Integrate tags and filters.

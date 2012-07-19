@@ -1,0 +1,192 @@
+/* 
+    Design goes here 
+*/
+
+body {
+	font-family:"Helvetica Neue", Helvetica, Arial,  Geneva, sans-serif;
+	font-size:11px;
+    text-align:center;
+    margin:0;
+}
+
+img.windows {
+width:1000px;
+height:665px;
+background:url("images/windows_projected.jpg") 0 0;
+
+}
+img.windows:hover {
+    background-position: -1000px 0;
+    }
+
+#contact,
+#cv,
+#viewall {
+    position:fixed;
+	font-size:26px;
+	color:#2c2c2c;
+	font-weight:lighter;
+	top:2px;
+	background-color:white;
+    z-index:200;
+}
+
+#viewall {
+    background-color:transparent;
+    width:100%;
+    left:0
+}
+
+#viewall a {
+    font-size:0.5em;
+    background-color:#000;
+    color:#fff;
+    padding:2px 5px;
+    text-decoration:none;
+    
+    -webkit-border-radius:5px; 
+    -moz-border-radius:5px; 
+    border-radius:5px;
+}
+
+#contact {
+	left:10px;
+    padding-right:5px;
+    z-index:201;
+} 
+
+#cv {
+	right:10px;
+    padding:0 0 0 5px;
+}
+
+#header {
+    margin:60px 0 0 0;
+    width:1000px;
+}
+
+*html #contact,
+#cv,
+#header {
+position:absolute;
+}
+
+#content,
+.project,
+.break {
+    width:1000px;
+    margin:0 auto;
+}
+
+.project {
+    padding:7px 0 0;
+}
+
+#content {
+    margin-bottom:70px;
+}
+
+.project h2 {
+    font-size:11px;
+    margin:0;
+    text-transform:uppercase;
+    letter-spacing:3px;
+}
+
+.project .description {
+    text-align:center;
+    font-style:italic;
+}
+
+.project p {
+    margin:15px auto 15px;
+    text-align:left;
+    width:500px;
+    line-height:1.5em;
+}
+
+.project .media {
+    margin-top:15px;
+    margin-bottom:30px;
+    position:relative;
+}
+
+.project .images {
+    height:auto;
+    margin-top:15px;
+    margin-bottom:15px;
+	background: transparent;
+}
+
+#test {
+	left: 0px; 
+	width: 1000px;
+	background: url("images/windows2.jpg") 0 0;	
+}
+
+#test a:hover{
+	background: url("images/windows2.jpg") -1000px 0;
+}
+
+.project .video {
+    margin-top:15px;
+    margin-bottom:15px;
+}
+
+.slideshow {
+    position:relative;
+    width:100%;
+}
+
+.previous,
+.next {
+    font-size:26px;
+    position:absolute;
+    top:10px;
+    width:57px;
+    height:auto;
+    background-color:transparent;
+    cursor:pointer;
+    z-index:100;
+}
+
+.previous {
+    /* background: transparent url ('images/previous.gif') no-repeat scroll 0 0; 
+    */
+    background-color:white;
+    left:0;
+}
+
+.next {
+    /*background: transparent url ('images/next.jpg') no-repeat scroll 0 0;
+    */
+    background-color:white;
+    right: 0;
+}
+
+#copyright {
+    margin:15px auto 30px;
+    right:5px;
+    font-size:13px;
+    font-style:italic;
+}
+
+a:link { 
+    text-decoration:none; 
+    color: #2c2c2c;
+}
+a:active { 
+    text-decoration:none;
+	color: #2c2c2c;
+}
+a:visited { 
+    text-decoration:none; 
+    color:#2c2c2c; 
+}
+a:hover { 
+    text-decoration:underline; 
+}
+
+a img { border: none; }
+
+
