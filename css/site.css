@@ -1,6 +1,58 @@
 /* 
-    Design goes here 
+   RESET
 */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: normal;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/* CUSTOM STYLES */
 
 body {
 	font-family:"Helvetica Neue", Helvetica, Arial,  Geneva, sans-serif;
@@ -9,15 +61,149 @@ body {
     margin:0;
 }
 
+ul {
+    list-style: none;
+    display: block; 
+}
+
+h1 {
+    display: block;
+    width: 500px;
+    margin: 0 auto;
+    padding-top: 40px;
+    text-align: left;
+    font-size: 2em;
+}
+
+h1.stats {
+    width: 200px;
+    margin: 0 50px 0 0;
+    float: left;
+    padding-top: 0;
+}
+
+h1.stats:last-child {
+    margin-right: 0;
+}
+
+.num {
+    font-size: 80px;
+    margin: none;
+}
+
+h3 {
+    margin-top: 2em; 
+    font-size: 20px;
+}
+
+h4 {
+    font-size: 22px;
+    margin: 18px auto 0px;
+    letter-spacing: 3px;
+    font-weight: 100;
+    width: 500px;
+    text-align: left;
+}
+
+.callout {
+    display: inline-block;
+    text-align: center;
+    padding: 15px 0 30px;
+    border-bottom: 1px black solid;
+    border-top: 1px black solid;
+}
+
+.callout h4 {
+    float: left;
+    width: 250px;
+}
+
+.mediaCallout {
+    display: inline-block;
+    margin: 15px 0 15px 105px;
+}
+
+.mediaCallout img,
+.mediaCallout iframe {
+    float: left;
+}
+
+.mediaCallout .details {
+    float: left;
+    margin: 0 0 0 25px;
+    width: 80px;
+    text-align: left;
+    font-style: italic;
+    line-height: 1.75em;
+}
+ 
+.slides {
+
+}
+
+#proposal2012wrapper {
+    height: 250px;
+    width: 500px;
+    margin: 10px auto 0px;
+}
+
+#proposal2011wrapper {
+    height: 386px;
+    width: 500px;
+    margin: 10px auto 0px;
+}
+
+.nav {
+    width: 500px;
+    margin: 2px auto 30px;
+}
+
+#oldeventswrapper {
+    height: 502px;
+    width: 500px;
+    margin: 10px auto 0px;
+}
+
+#leftnav {
+    position: fixed;
+    font-size: 26px;
+    font-weight: 100;
+    text-align: left;
+    letter-spacing: 1px;
+    color: #2c2c2c;
+    top: 126px;
+    padding: 0 10px 0 40px;
+    background-color: white;
+    z-index: 200;
+}
+
+/* ---- Hattery Proposal ---- */
+
+#hattery {
+    padding-top: 106px;
+}
+
+#hattery .mediaCallout {
+    margin-bottom: 60px;
+}
+
+.doubleimage {
+    margin: 40px 0 110px;
+}
+
+/* ------------------------------- */
+
 #contact,
 #cv,
 #viewall {
     position:fixed;
 	font-size:26px;
-	color:#2c2c2c;
-	font-weight:lighter;
+	font-weight: 100;
+	letter-spacing: 1px;
+	color: #2c2c2c;
 	top:2px;
-	background-color:white;
+	background-color: white;
+	/* background-color: #dfdfdf; */
     z-index:200;
 }
 
@@ -68,8 +254,19 @@ position:absolute;
     margin:0 auto;
 }
 
+.break {
+    border-bottom: dotted 1px gray;
+}
+
+.break500 {
+    width:500px;
+    margin:0 auto;
+    border-bottom: solid 1px black;
+
+}
+
 .project {
-    padding:7px 0 0;
+    padding:7px 0 60px;
 }
 
 #content {
@@ -77,14 +274,14 @@ position:absolute;
 }
 
 .project h2 {
-    font-size:11px;
-    margin:0;
-    text-transform:uppercase;
-    letter-spacing:3px;
+    font-size: 22px;
+    margin: 0 auto 8px;
+    letter-spacing: 3px;
+    font-weight: 100;
+    width: 500px;
 }
 
 .project .description {
-    text-align:center;
     font-style:italic;
 }
 
@@ -106,6 +303,8 @@ position:absolute;
     margin-top:15px;
     margin-bottom:15px;
 	background: transparent;
+	width: 100%;
+	overflow: hidden;
 }
 
 #test {
@@ -128,10 +327,21 @@ position:absolute;
     width:100%;
 }
 
+
+
 .previous,
-.next {
-    font-size:26px;
-    position:absolute;
+.next,
+.next1,
+.next2,
+.next3,
+.next4,
+.prev1,
+.prev2,
+.prev3,
+.prev4 {
+    font-size:20px;
+    text-decoration: underline;
+    font-weight: lighter;
     top:10px;
     width:57px;
     height:auto;
@@ -140,19 +350,39 @@ position:absolute;
     z-index:100;
 }
 
-.previous {
-    /* background: transparent url ('images/previous.gif') no-repeat scroll 0 0; 
-    */
+.previous,
+.next {
+    position:absolute;
+    font-size: 26px;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.previous,
+.prev1,
+.prev2,
+.prev3,
+.prev4 {
     background-color:white;
     left:0;
 }
 
-.next {
-    /*background: transparent url ('images/next.jpg') no-repeat scroll 0 0;
-    */
+.next,
+.next1,
+.next2,
+.next3,
+.next4 {
     background-color:white;
     right: 0;
 }
+
+.next1,
+.next2,
+.next3,
+.next4 {
+    float: right;
+}
+
 
 #copyright {
     margin:15px auto 30px;

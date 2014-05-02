@@ -1,0 +1,363 @@
+/* 
+    Design goes here 
+*/
+
+body {
+	font-family:"Helvetica Neue", Helvetica, Arial,  Geneva, sans-serif;
+	font-size:11px;
+    text-align:center;
+    margin:0;
+}
+
+/* This is sloppy */
+
+
+
+h1 {
+    width: 500px;
+    text-align: left;
+    margin: 0 auto;
+    padding-top: 40px;
+}
+
+h1.stats {
+    width: 200px;
+    margin: 0 50px 0 0;
+    float: left;
+    padding-top: 0;
+}
+
+h1.stats:last-child {
+    margin-right: 0;
+}
+
+.num {
+    font-size: 80px;
+    margin: none;
+}
+
+h3 {
+    margin-top: 2em; 
+    font-size: 20px;
+}
+
+h4 {
+    font-size: 22px;
+    margin: 18px auto 0px;
+    letter-spacing: 3px;
+    font-weight: 100;
+    width: 500px;
+    text-align: left;
+}
+
+.callout {
+    display: inline-block;
+    text-align: center;
+    padding: 15px 0 30px;
+    border-bottom: 1px black solid;
+    border-top: 1px black solid;
+}
+
+.callout h4 {
+    float: left;
+    width: 250px;
+}
+
+.mediaCallout {
+    display: inline-block;
+    margin: 15px 0 15px 105px;
+}
+
+.mediaCallout img,
+.mediaCallout iframe {
+    float: left;
+}
+
+.mediaCallout .details {
+    float: left;
+    margin: 0 0 0 25px;
+    width: 80px;
+    text-align: left;
+    font-style: italic;
+    line-height: 1.75em;
+}
+ 
+.slides {
+
+}
+
+#proposal2012wrapper {
+    height: 250px;
+    width: 500px;
+    margin: 10px auto 0px;
+}
+
+#proposal2011wrapper {
+    height: 386px;
+    width: 500px;
+    margin: 10px auto 0px;
+}
+
+.nav {
+    width: 500px;
+    margin: 2px auto 30px;
+}
+
+#oldeventswrapper {
+    height: 502px;
+    width: 500px;
+    margin: 10px auto 0px;
+}
+
+
+
+/* ---- Hattery Proposal ---- */
+
+#hatterynav {
+    position: fixed;
+    font-size: 26px;
+    font-weight: 100;
+    text-align: left;
+    letter-spacing: 1px;
+    color: #2c2c2c;
+    top: 100px;
+    left: 10px
+    background-color: white;
+    z-index: 200;
+}
+
+#hattery {
+    padding-top: 106px;
+}
+
+#hattery .mediaCallout {
+    margin-bottom: 60px;
+}
+
+.doubleimage {
+    margin: 40px 0 110px;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ------------------------------- */
+
+#contact,
+#cv,
+#viewall {
+    position:fixed;
+	font-size:26px;
+	font-weight: 100;
+	letter-spacing: 1px;
+	color: #2c2c2c;
+	top:2px;
+	background-color: white;
+	/* background-color: #dfdfdf; */
+    z-index:200;
+}
+
+#viewall {
+    background-color:transparent;
+    width:100%;
+    left:0
+}
+
+#viewall a {
+    font-size:0.5em;
+    background-color:#000;
+    color:#fff;
+    padding:2px 5px;
+    text-decoration:none;
+    
+    -webkit-border-radius:5px; 
+    -moz-border-radius:5px; 
+    border-radius:5px;
+}
+
+#contact {
+	left:10px;
+    padding-right:5px;
+    z-index:201;
+} 
+
+#cv {
+	right:10px;
+    padding:0 0 0 5px;
+}
+
+#header {
+    margin:60px 0 0 0;
+    width:1000px;
+}
+
+*html #contact,
+#cv,
+#header {
+position:absolute;
+}
+
+#content,
+.project,
+.break {
+    width:1000px;
+    margin:0 auto;
+}
+
+.break {
+    border-bottom: dotted 1px gray;
+}
+
+.break500 {
+    width:500px;
+    margin:0 auto;
+    border-bottom: solid 1px black;
+
+}
+
+.project {
+    padding:7px 0 60px;
+}
+
+#content {
+    margin-bottom:70px;
+}
+
+.project h2 {
+    font-size: 22px;
+    margin: 0 auto 8px;
+    letter-spacing: 3px;
+    font-weight: 100;
+    width: 500px;
+}
+
+.project .description {
+    font-style:italic;
+}
+
+.project p {
+    margin:15px auto 15px;
+    text-align:left;
+    width:500px;
+    line-height:1.5em;
+}
+
+.project .media {
+    margin-top:15px;
+    margin-bottom:30px;
+    position:relative;
+}
+
+.project .images {
+    height:auto;
+    margin-top:15px;
+    margin-bottom:15px;
+	background: transparent;
+	width: 100%;
+	overflow: hidden;
+}
+
+#test {
+	left: 0px; 
+	width: 1000px;
+	background: url("images/windows2.jpg") 0 0;	
+}
+
+#test a:hover{
+	background: url("images/windows2.jpg") -1000px 0;
+}
+
+.project .video {
+    margin-top:15px;
+    margin-bottom:15px;
+}
+
+.slideshow {
+    position:relative;
+    width:100%;
+}
+
+
+
+.previous,
+.next,
+.next1,
+.next2,
+.next3,
+.next4,
+.prev1,
+.prev2,
+.prev3,
+.prev4 {
+    font-size:20px;
+    text-decoration: underline;
+    font-weight: lighter;
+    top:10px;
+    width:57px;
+    height:auto;
+    background-color:transparent;
+    cursor:pointer;
+    z-index:100;
+}
+
+.previous,
+.next {
+    position:absolute;
+    font-size: 26px;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.previous,
+.prev1,
+.prev2,
+.prev3,
+.prev4 {
+    background-color:white;
+    left:0;
+}
+
+.next,
+.next1,
+.next2,
+.next3,
+.next4 {
+    background-color:white;
+    right: 0;
+}
+
+.next1,
+.next2,
+.next3,
+.next4 {
+    float: right;
+}
+
+
+#copyright {
+    margin:15px auto 30px;
+    right:5px;
+    font-size:13px;
+    font-style:italic;
+}
+
+a:link { 
+    text-decoration:none; 
+    color: #2c2c2c;
+}
+a:active { 
+    text-decoration:none;
+	color: #2c2c2c;
+}
+a:visited { 
+    text-decoration:none; 
+    color:#2c2c2c; 
+}
+a:hover { 
+    text-decoration:underline; 
+}
+
+a img { border: none; }
+
+

@@ -1,6 +1,11 @@
 #!/usr/bin/perl
 
+use strict;
 use File::Find;
+
+my @foundmods;
+my %found;
+my (@mod1, @mod2);
 
 print "Content-type:  text/html\n\n";
 
@@ -36,7 +41,7 @@ table     {margin:30px 0 0;}
 
 <tr><td class="leftcol"><b>Location of Perl</b></td><td class="rightcol">~;
 
-foreach $location ( split(" ",`whereis perl`) ) {
+foreach my $location (split ' ', `whereis perl`) {
 	print "$location<br>\n";
 }
 
@@ -44,7 +49,7 @@ print qq~
 </td></tr>
 <tr><td class="leftcol"><b>Location of Sendmail</b></td><td class="rightcol">~;
 
-foreach $location ( split(" ",`whereis sendmail`) ) {
+foreach my $location (split ' ', `whereis sendmail`) {
 	print "$location<br>\n";
 }
 
@@ -52,7 +57,7 @@ print qq~
 </td></tr>
 <tr><td class="leftcol"><b>Directory locations searched for perl executables</b></td><td class="rightcol">~;
 
-foreach $location (@INC){
+foreach my $location (@INC) {
 	print "$location <br>\n";
 }
 
@@ -63,7 +68,7 @@ print qq~
 <table>
 <tr><th colspan="2">Environment Variables</th></tr>~;
 
-foreach $var(keys %ENV){
+foreach my $var (keys %ENV) {
 	print qq~ <tr><td class="leftcol"><b>$var</b></td><td class="rightcol">$ENV{$var}</td></tr>~;
 }
 
@@ -73,24 +78,23 @@ print qq~
 <table width="100%">
 <tr><th colspan="3">Installed Perl Modules</th></tr>~;
 
-find({wanted=>\&wanted,follow=>1},@INC);
-$modcount = 0;
-foreach $line(@foundmods){
-	$match = lc($line);
-	if ($found{$line}[0] >0){
-		$found{$line} = [$found{$line}[0]+1,$match]
+find({wanted=>\&wanted,follow=>1,follow_skip=>2},@INC);
+my $modcount = 0;
+foreach my $line (@foundmods){
+	my $match = lc $line;
+	if ($found{$line}[0] > 0) {
+		$found{$line} = [$found{$line}[0]+1, $match];
 	} else {
-		$found{$line} = ["1",$match];$modcount++
+		$found{$line} = [1, $match];
+		$modcount++;
 	}
 }
 @foundmods = sort count keys(%found);
 
-sub count {return $found{$a}[1] cmp $found{$b}[1]}
-
-$third = $modcount/3;
-$count=0;
+my $third = $modcount/3;
+my $count=0;
 print qq~ <tr><td width="33%" valign="top"><table>~;
-foreach $mod(@foundmods){
+foreach my $mod (@foundmods){
 	chomp $mod;
 	$count++;
 	if ($count <= $third){
@@ -102,7 +106,7 @@ foreach $mod(@foundmods){
 
 print qq~ </table></td><td width="33%" valign="top"><table>~;
 $count = 0;
-foreach $mod1(@mod1){
+foreach my $mod1 (@mod1){
 	chomp $mod1;
 	$count++;
 	if ($count <= $third){
@@ -113,7 +117,7 @@ foreach $mod1(@mod1){
 }
 print qq~ </table></td><td width="33%" valign="top"><table>~;
 $count = 0;
-foreach $mod2(@mod2){
+foreach my $mod2 (@mod2){
 	chomp $mod2;
 	$count++;
 	if ($count <= $third){
@@ -129,11 +133,14 @@ print qq~
 
 exit;
 
+sub count {
+	return $found{$a}[1] cmp $found{$b}[1];
+}
+
 sub wanted {
-	$count = 0;
 	if ($File::Find::name =~ /\.pm$/){
-		open(MODFILE,$File::Find::name) || return;
-		while(<MODFILE>){
+		open(my $MODFILE, '<', $File::Find::name) || return;
+		while (<$MODFILE>){
 			if (/^ *package +(\S+);/){
 				push (@foundmods, $1);
 				last;
